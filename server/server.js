@@ -9,9 +9,13 @@ const taskRoutes = require('./routes/taskRoutes');
 
 const app = express();
 mongoDB();
-app.use(cors());
+app.use(cors({
+    origin: '*', // Allow all origins
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'], // Allowed HTTP methods
+    allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+}));
 app.use(express.json());
-
+app.use(express.urlencoded({ extended: true }))
 app.use('/api/auth', authRoutes);
 app.use('/api/tasks', taskRoutes);
 

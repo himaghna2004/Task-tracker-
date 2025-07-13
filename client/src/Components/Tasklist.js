@@ -17,4 +17,4 @@ function TaskList({ tasks, onUpdate, onDelete, onToggleComplete }) {
   );
 }
 
-export default Tasklist;
+export default TaskList;

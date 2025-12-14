@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import TaskForm from '../Components/Taskform';
 import TaskList from '../Components/Tasklist';
 import FilterSortBar from '../Components/Filter_sort_bar';
+import '../TaskPage.css';
 import {
   fetchTasks,
   createTask,
